@@ -1,0 +1,262 @@
+/* ============================================
+   Auditorium Detail Page
+   ============================================ */
+
+/* Hero adjustments for subpage */
+.hero__label {
+  font-family: 'Larken', 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero__title {
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   Detail Split — Full-width 50/50
+   ============================================ */
+.detail-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 75vh;
+}
+
+.detail-split--reverse {
+  direction: rtl;
+}
+
+.detail-split--reverse > * {
+  direction: ltr;
+}
+
+.detail-split__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 5vw 5rem 6vw;
+  background: #ffffff;
+}
+
+.detail-split--reverse .detail-split__text {
+  padding: 5rem 6vw 5rem 5vw;
+}
+
+.detail-split__text .section-text {
+  margin-bottom: 1.25rem;
+}
+
+.detail-split__image {
+  overflow: hidden;
+  position: relative;
+}
+
+.detail-split__image img {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+}
+
+/* Alternate background */
+.detail-split:nth-of-type(even) .detail-split__text {
+  background: #f8f7f4;
+}
+
+/* ============================================
+   Features Grid
+   ============================================ */
+.features {
+  padding: 7rem 0;
+  background: #f8f7f4;
+}
+
+.features__inner {
+  padding: 0 6vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.features__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.feature-card__number {
+  font-family: 'Larken', 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #09322F;
+  display: block;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.feature-card__title {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #09322F;
+}
+
+.feature-card__text {
+  color: #3d6461;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* ============================================
+   Full-bleed Image Break
+   ============================================ */
+.image-break {
+  padding: 0;
+  overflow: hidden;
+  max-height: 60vh;
+}
+
+.image-break__inner {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.image-break__inner img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+}
+
+/* ============================================
+   Ideal For
+   ============================================ */
+.ideal-for {
+  padding: 7rem 0;
+  background: #ffffff;
+}
+
+.ideal-for__inner {
+  padding: 0 6vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ideal-for__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.ideal-for__item {
+  padding: 1.75rem 1.5rem;
+  background: #f8f7f4;
+  font-size: 0.95rem;
+  color: #09322F;
+  transition: background 0.3s ease;
+}
+
+.ideal-for__item:hover {
+  background: #09322F;
+  color: #ffffff;
+}
+
+/* ============================================
+   Back Link
+   ============================================ */
+.back-link {
+  padding: 5rem 0;
+  text-align: center;
+  background: #f8f7f4;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ideal-for__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .detail-split--reverse {
+    direction: ltr;
+  }
+
+  .detail-split__text {
+    padding: 4rem 2rem;
+  }
+
+  .detail-split--reverse .detail-split__text {
+    padding: 4rem 2rem;
+  }
+
+  .detail-split__image {
+    min-height: 50vh;
+  }
+
+  .features {
+    padding: 5rem 0;
+  }
+
+  .features__inner {
+    padding: 0 2rem;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ideal-for {
+    padding: 5rem 0;
+  }
+
+  .ideal-for__inner {
+    padding: 0 2rem;
+  }
+
+  .ideal-for__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image-break,
+  .image-break__inner {
+    max-height: 40vh;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .ideal-for__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+}
