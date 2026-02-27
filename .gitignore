@@ -1,2 +1,5 @@
 # Large video files (use Netlify LFS or host separately)
 images/hero-video.mov
+
+# Local Netlify folder
+.netlify
